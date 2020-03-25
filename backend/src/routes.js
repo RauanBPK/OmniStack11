@@ -1,33 +1,20 @@
 const express = require('express');
 
+const OngController = require('./controllers/OngController');
+const IncidentController = require('./controllers/IncidentController');
+const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
+
 const routes = express.Router();
 
-/**
- * GET - Buscar
- * POST - Criar
- * PUT - Alterar
- * DELETE - Deletar
- */
+routes.post('/sessions', SessionController.create);
 
- /**
-  * Tipos de parametros
-  * 
-  * Query Params: Parametro nomeado apos '?' (Filtro, Paginação)
-  * Route Params: Parametro p/ identificar recursos /users/:id
-  * Request Body: Corpo da requisição - Criar ou alterar recursos 
-  */
-routes.post('/users', (req, res) => {
-    //const Qparams = req.query; //Query params - Passados na rota. Ex: /users?name=Rauan&Idade=23
-    //const Rparams = req.params; //Route params - Passados na rota. Ex: /users/1
-    const Bparams = req.body; //Body params - POST?
-    //console.log(Qparams)
-    //console.log(Rparams)
-    console.log(Bparams)
+routes.get('/ongs',  OngController.index);
+routes.post('/ongs', OngController.create);
 
-    return res.json({
-        evento: 'Semana OmniStack 11',
-        aluno: 'Rauan Pires'
-    });
-})
+routes.get('/profile', ProfileController.index);
 
+routes.post('/incidents', IncidentController.create);
+routes.get('/incidents', IncidentController.index);
+routes.delete('/incidents/:id', IncidentController.delete) //req.params
 module.exports = routes;
