@@ -1,0 +1,2 @@
+npm install axios -> cliente responsavel por fazer chamas http pro server. instalado dentro do /frontend
+npm install knex  -> query builder. Responsavel por criar migrations e administrar o bd. instalado dentro do /frontend
