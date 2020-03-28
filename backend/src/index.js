@@ -15,5 +15,5 @@ app.use(routes);
  * Vamos utilizar o query builder knex
  */
 
-app.listen(3332); 
+app.listen(3331); 
 

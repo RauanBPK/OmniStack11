@@ -1,2 +1,11 @@
-npm install axios -> cliente responsavel por fazer chamas http pro server. instalado dentro do /frontend
+npm install axios -> cliente responsavel por fazer chamas http pro server. instalado dentro do /frontend e no /mobile
 npm install knex  -> query builder. Responsavel por criar migrations e administrar o bd. instalado dentro do /frontend
+npm install -g expo -> Ainda n sei // expo init mobile -> inicia projeto expo mobile
+
+npm install @react-navigation/native -> instala negocio de rotas pra app mobile
+
+npm install intl -> pra formatacao padra internacional ( pra colocar o R$ af) instalado no /mobile
+
+//Instala um monte de coisa que eu ja nem sei mais
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+expo install expo-mail-composer -> pra mandar email pela app
